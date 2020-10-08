@@ -13,11 +13,11 @@ buildah bud -t toolbox-steam:f33
 Start toolbox using image
 ```
 toolbox create -c f33-steam -i toolbox-steam:f33
-toolbox enter f33-steam
 ```
 
 Run steam
 ```
+toolbox enter f33-steam
 steam
 ```
 
