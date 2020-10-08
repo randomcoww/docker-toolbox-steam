@@ -23,9 +23,9 @@ steam
 
 Controller support needs udev rules on host:
 ```
-wget -O /etc/udev/rules.d/62-steam-input.rules \
+wget -O /etc/udev/rules.d/60-steam-input.rules \
   https://raw.githubusercontent.com/ValveSoftware/steam-devices/master/60-steam-input.rules 
 
-wget -O /etc/udev/rules.d/62-steam-vr.rules \
+wget -O /etc/udev/rules.d/60-steam-vr.rules \
   https://raw.githubusercontent.com/ValveSoftware/steam-devices/master/60-steam-vr.rules
 ```
