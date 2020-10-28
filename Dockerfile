@@ -1,4 +1,5 @@
-FROM registry.fedoraproject.org/f33/fedora-toolbox:33
+ARG FEDORA_RELEASE=33
+FROM registry.fedoraproject.org/f$FEDORA_RELEASE/fedora-toolbox:$FEDORA_RELEASE
 
 RUN set -x \
   \
