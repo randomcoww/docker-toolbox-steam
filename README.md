@@ -7,12 +7,14 @@ Add Steam and Intel libva drivers for hardware stream decoding to base toolbox i
 
 Build image
 ```
-buildah bud -t toolbox-steam:f33
+podman build \
+  --security-opt label=disable \
+  -t toolbox-steam:latest
 ```
 
 Start toolbox using image
 ```
-toolbox create -c f33-steam -i toolbox-steam:f33
+toolbox create -c f33-steam -i toolbox-steam:latest
 ```
 
 Run steam
