@@ -4,22 +4,14 @@ Upstream https://github.com/containers/toolbox
 
 Add Steam and Intel libva drivers for hardware stream decoding to base toolbox image.
 
-
-Build image
-```
-podman build \
-  --security-opt label=disable \
-  -t toolbox-steam:latest
-```
-
 Start toolbox using image
 ```
-toolbox create -c f33-steam -i toolbox-steam:latest
+toolbox create -c steam -i docker.io/randomcoww/fedora-toolbox-steam:latest
 ```
 
 Run steam
 ```
-toolbox enter f33-steam
+toolbox enter steam
 steam
 ```
 
