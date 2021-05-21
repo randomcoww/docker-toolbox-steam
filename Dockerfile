@@ -1,4 +1,4 @@
-ARG FEDORA_RELEASE=33
+ARG FEDORA_RELEASE=34
 FROM registry.fedoraproject.org/f$FEDORA_RELEASE/fedora-toolbox:$FEDORA_RELEASE
 
 RUN set -x \
@@ -6,7 +6,7 @@ RUN set -x \
   && dnf -y install \
     https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
     https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
-  && dnf -y install \
+  && dnf -y install --nogpgcheck \
     steam \
     libva.i686 \
     libva-intel-hybrid-driver.i686 \
